@@ -124,10 +124,10 @@
                     
                    
                     <li class="landing_link">
-                        <a target="_blank" href="landing.html"><i class="fa fa-star"></i> <span class="nav-label">Help</span> <span class="label label-warning pull-right">NEW</span></a>
+                        <a target="_blank" href="landing.html"><i class="fa fa-star"></i> <span class="nav-label">วิธีใช้งาน</span> <span class="label label-warning pull-right">NEW</span></a>
                     </li>
                     <li class="special_link">
-                        <a href="package.html"><i class="fa fa-sign-out"></i> <span class="nav-label">Exit</span></a>
+                        <a href="package.html"><i class="fa fa-sign-out"></i> <span class="nav-label">ออกจากระบบ</span></a>
                     </li>
                 </ul>
 
