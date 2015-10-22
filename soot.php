@@ -147,7 +147,6 @@
                                     for($i=20;$i<=59;$i++){
                                     ?>
                                         <tr>
-                                           
                                             <td>08:<?=$i?></td>
                                             <td>Flow=1.67Kg/s</td>
                                             <td>Soot=21L,21R,D1,D14,AHC2</td>
