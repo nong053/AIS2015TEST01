@@ -10,11 +10,12 @@
 
     
     <!-- kendo ui resource start -->
-	<!-- -->
+	 
 	<link rel="stylesheet" href="js/kendoCommercial/styles/kendo.common.min.css" />
-	<link rel="stylesheet" href="js/kendoCommercial/styles/kendo.default.min.css" /> 
+	<link rel="stylesheet" href="js/kendoCommercial/styles/kendo.default.min.css" />
 
     <!-- kendo ui resource end -->
+    
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
 
@@ -29,8 +30,8 @@
      <link href="css/custom.css" rel="stylesheet">
 
       <!-- Mainly scripts -->
-    <!-- <script src="js/jquery-2.1.1.js"></script> -->
-    <script src="js/kendoCommercial/js/jquery.min.js"></script>
+   <script src="js/jquery-2.1.1.js"></script> 
+    <!--  <script src="js/kendoCommercial/js/jquery.min.js"></script>-->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
@@ -69,8 +70,9 @@
     <script src="js/plugins/toastr/toastr.min.js"></script>
 
 	<!-- kendo ui resource end -->
-    <script src="http://localhost/AIS2015/js/kendoCommercial/js/kendo.all.min.js"></script>
-     
+   <!-- <script src="js/kendoCommercial/js/kendo.all.min.js"></script> -->
+    
+     <script src="//kendo.cdn.telerik.com/2015.3.930/js/kendo.all.min.js"></script>
      
 </head>
 
@@ -105,7 +107,7 @@
                         <a href="index.html"><i class="fa fa-dashboard"></i> <span class="nav-label">Dashboards</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li class="active"><a href="index.php?page=trend">Trend</a></li>
-                            <li><a href="#">Soot/Blower</a></li>
+                            <li><a href="index.php?page=soot">Soot/Blower</a></li>
                             <li><a href="index.php?page=process_view">Process View</a></li>
                           
                         </ul>
@@ -116,7 +118,7 @@
                         <ul class="nav nav-second-level ">
                         	<li><a href="#">Design Trend Color</a></li>
                             <li><a href="index.php?page=design_trend"> Design Trend</a></li>
-                            <li><a href="#">Design Calcultion</a></li>
+                            <li><a href="index.php?page=design_calculation">Design Calcultion</a></li>
                        
                         
                         </ul>
@@ -249,12 +251,14 @@
         						case 'design_trend':include 'design_trend.php';break;
         						case 'process_view':include 'process_view.php';break;
         						case 'trend':include 'trend.php';break;
-        						
         						case 'serverSetting':include 'serverSetting.php';break;
         						case 'pointConfiguration':include 'pointConfiguration.php';break;
         						case 'tagConfiguration':include 'tagConfiguration.php';break;
         						case 'addUser':include 'addUser.php';break;
         						case 'statistics':include 'statistics.php';break;
+        						case 'design_calculation':include 'design_calculation.php';break;
+        						case 'form_calculation':include 'form_calculation.php';break;
+        						case 'soot':include 'soot.php';break;
         						
         					}
         					?>
