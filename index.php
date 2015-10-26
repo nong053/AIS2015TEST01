@@ -116,7 +116,7 @@
                     <li class="active">
                         <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">ออกแบบ</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level ">
-                        	<li><a href="#">Design Trend Color</a></li>
+                        	<li><a href="index.php?page=trend_color">Design Trend Color</a></li>
                             <li><a href="index.php?page=design_trend"> Design Trend</a></li>
                             <li><a href="index.php?page=design_calculation">Design Calcultion</a></li>
                        
@@ -259,6 +259,7 @@
         						case 'design_calculation':include 'design_calculation.php';break;
         						case 'form_calculation':include 'form_calculation.php';break;
         						case 'soot':include 'soot.php';break;
+        						case 'trend_color':include 'trend_color.php';break;
         						
         					}
         					?>
