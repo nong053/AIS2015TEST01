@@ -260,6 +260,7 @@
         						case 'form_calculation':include 'form_calculation.php';break;
         						case 'soot':include 'soot.php';break;
         						case 'trend_color':include 'trend_color.php';break;
+        						case 'trend_setting':include 'trend_setting.php';break;
         						
         					}
         					?>

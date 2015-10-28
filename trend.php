@@ -16,7 +16,7 @@
     <ul class="nav nav-tabs">
         <li class="active"><a href="#tab-1" data-toggle="tab" aria-expanded="true"> <b>Trend001</b></a></li>
         <li class=""><a href="#tab-2" data-toggle="tab" aria-expanded="false"><b>Trend002</b></a></li>
-        <li class=""><a href="#tab-3" data-toggle="tab" aria-expanded="false"><b><span class='btnPlus fa fa-plus-circle'></span></b></a></li>
+        <li class=""><a  href="#tab-3" data-toggle="tab" aria-expanded="false"><b><span class='btnPlus fa fa-plus-circle'></span></b></a></li>
         
          <li class='pull-right'>  
         <div class="ibox-tools topPanelBtn">
@@ -118,11 +118,47 @@
                  <div class='col-md-4'>
                     <!-- date display -->
                     <div class="downloadSettingArea">
-                        <button type="button" class="btn btn-primary btn-sm  ">
-                            <i class="fa fa-download"></i>&nbsp;&nbsp;
-                           
+                     
+                        <button type="button" class="btn btn-primary btn-sm  " data-container="body" 
+                        data-toggle="popover" data-placement="bottom"  data-html="true"
+                        data-content="
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type='radio' name='download'>
+                                </td>
+                                <td>
+                                    Excel
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type='radio' name='download'>
+                                </td>
+                                <td>
+                                    Libre Office
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type='radio' name='download'>
+                                </td>
+                                <td>
+                                    HTML
+                                </td>
+                            </tr>
+                            
+                        </table>
+                        <button class='btn btn-primary btn-sm  ' type='button'>
+                            <i class='fa fa-download'></i>&nbsp;&nbsp;
+                           Download
                         </button>
-                         <button type="button" class="btn btn-warning  btn-sm  ">
+                        ">
+                          <i class="fa fa-download"></i>&nbsp;&nbsp;
+                        </button>
+                       
+                     
+                         <button type="button" data-toggle="modal" data-target="#setTimeScale" id='editTrendPoint' class="btn btn-warning  btn-sm  ">
                             <i class="fa fa-cogs"></i>&nbsp;&nbsp;
                           
                         </button>
@@ -565,7 +601,14 @@
             content2
             </div>
         </div>
-    </div>
+        <div class="tab-pane" id="tab-3">
+            <div class="panel-body">
+           
+            <!-- content area tab-3 start -->
+             <div id="areaTrendSeting"></div>
+            <!-- content area tab-3 start -->
+            </div>
+        </div>
 
 
 </div>
@@ -598,46 +641,30 @@
 
 <!-- Modal Start -->
 <div aria-hidden="true" role="dialog" tabindex="-1" id="setTimeScale" class="modal inmodal in" style="display: none;">
-     <div class="modal-dialog">
+     <div class="modal-dialog modal-lg">
       <div class="modal-content animated flipInY">
         <div class="modal-header">
           <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-           <h5 class="modal-title">เพิ่ม Trend</h5>
+           <h5 class="modal-title">Edit Point</h5>
               
            </div>
           <div class="modal-body">
           	
-                            <form class="form-horizontal">
-                               
-                                <div class="form-group">
-                                	<label class="col-lg-2 control-label padding5">ชื่อ Trend</label>
-
-                                    <div class="col-lg-10 padding5">
-                                    	<input type="email" class="form-control " placeholder="ชื่อ Trend"> 
+                            <!-- edit trend point start -->
+                                    <div id='editTrendPointArea'>
+                                        
                                     </div>
-                                </div>
-                                <div class="form-group"><label class="col-lg-2 control-label padding5">Trend Group</label>
-
-                                    <div class="col-lg-10 padding5">
-	                                    <select name="account" class="form-control m-b">
-	                                        <option>Trend Group</option>
-	                                        <option>Trend Group1</option>
-	                                        <option>Trend Group2</option>
-	                                        <option>Trend Group3</option>
-	                                    </select>
-                                    </div>
-                                </div>
-                               
-                                
-                            </form>
+                             <!-- edit trend point end -->
                         
           </div>
          <div class="modal-footer">
          <button data-dismiss="modal" class="btn btn-white" type="button">ยกเลิก</button>
-        <button class="btn btn-primary" type="button">เพิ่ม</button>
+        <button class="btn btn-primary" type="button">ตกลง</button>
       </div>
      </div>
    </div>
   </div>
 <!-- Modal End -->
+  
+
             
