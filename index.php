@@ -24,14 +24,23 @@
 
     <!-- Gritter -->
     <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
-
+    
+     <!-- NouSlider -->
+    <link rel="stylesheet" href="css/plugins/nouslider/jquery.nouislider.css">
+    
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-     <link href="css/custom.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
       <!-- Mainly scripts -->
+      
    <script src="js/jquery-2.1.1.js"></script> 
-    <!--  <script src="js/kendoCommercial/js/jquery.min.js"></script>-->
+   <!-- NouSlider -->
+    <script src='js/nouislider.min.js'></script> 
+    <!-- 
+     <script src="js/plugins/nouslider/jquery.nouislider.min.js"></script>
+     <script src="js/kendoCommercial/js/jquery.min.js"></script>
+     -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
@@ -74,6 +83,7 @@
     
      <script src="//kendo.cdn.telerik.com/2015.3.930/js/kendo.all.min.js"></script>
      
+         
 </head>
 
 <body>
@@ -289,6 +299,10 @@
    
 
     
+   
+    
   
 </body>
 </html>
+
+

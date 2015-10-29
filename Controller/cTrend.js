@@ -1,8 +1,14 @@
 
 $(document).ready(function(){
+	
+	// manage slide 
+	
+	 
+	  
 	$("#chart").kendoChart({
 		theme: "Flat",
 		//theme: "MaterialBlack",
+		//renderAs: "canvas",
 		chartArea: {
 		    background: ""
 		   },
@@ -22,7 +28,7 @@ $(document).ready(function(){
            // text: "Spain electricity production (GWh)"
         },
         legend: {
-            position: "right",
+            position: "bottom",
             visible: false
         },
         seriesDefaults: {
@@ -73,9 +79,22 @@ $(document).ready(function(){
             visible: true,
             shared: true,
             format: "N0"
-        }
+        },
+        zoomable: {
+            mousewheel: {
+                lock: "y"
+            },
+            selection: {
+                lock: "y"
+            }
+        },
+        //pannable: true,
+        pannable: {
+            lock: "y"
+        },
     });
 	
+	//console.log($("#chart g g:3").get());
 	
 	/*click create trend graph start*/
 	$("[href='#tab-3']").click(function(){
@@ -114,5 +133,44 @@ $(document).ready(function(){
 			}
 		});
 	});
+	
+	
+	/*
+	var slider = document.getElementById('basic_slider');
+	 $("#basic_slider").noUiSlider({
+         start: 50,
+         behaviour: 'tap',
+         connect: 'upper',
+         range: {
+             'min':  0,
+             'max':  100
+         }
+     });
+	*/
+
+
+	var slider = document.getElementById('keypress');
+
+	noUiSlider.create(slider, {
+		start: 0,
+		//step: 10,
+		range: {
+			'min': 0,
+			//'20%': [ 300, 100 ],
+			//'50%': [ 800, 50 ],
+			'max': 100
+		}
+	});
+	
+	slider.noUiSlider.on('update', function( values, handle ) {
+		console.log(values[handle]);
+	});
+	
+	
+
+
+	 
+
+	 
 	
 });

@@ -3,13 +3,11 @@
 <link rel="stylesheet" href="//kendo.cdn.telerik.com/2015.3.930/styles/kendo.rtl.min.css">
 <link rel="stylesheet" href="//kendo.cdn.telerik.com/2015.3.930/styles/kendo.silver.min.css">
 <link rel="stylesheet" href="//kendo.cdn.telerik.com/2015.3.930/styles/kendo.silver.mobile.min.css">
+<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
 
-<link rel="stylesheet" href="css/plugins/nouslider/jquery.nouislider.css">
-<link rel="stylesheet" href="css/plugins/ionRangeSlider/ion.rangeSlider.css">
-<link rel="stylesheet" href="css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css">
- <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
 
-<!-- Content Start-->   
+<!-- Content Start--> 
+  
  <script src="Controller/cTrend.js"></script>
 <link href="css/trend.css" rel="stylesheet">  
 <div class="tabs-container topMargin">
@@ -98,14 +96,9 @@
             <div class='row'>
                 <div class='col-md-2 basicSlideArea'>
                 <!-- slide start -->
-                <div id="basic_slider" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                    <div class="noUi-base">
-                        <div class="noUi-origin noUi-connect" style="left: 48.1113%;">
-                            <div class="noUi-handle noUi-handle-lower"></div>
-                        </div>
-                    </div>
-                </div>
-            <!-- slide end -->
+                	<div id="keypress" ></div>
+                    <!-- <input type="text" id="input-with-keypress"> -->
+                <!-- slide end -->
                 </div>
                 <div class='col-md-6'>
                

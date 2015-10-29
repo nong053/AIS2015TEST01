@@ -1,0 +1,55 @@
+<script src='nouislider.min.js'></script> 
+<link href="nouislider.min.css" rel="stylesheet">  
+<div class="example">
+	<div id="keypress" >
+</div>
+<input type="text" id="input-with-keypress">
+			
+<script>
+var slider = document.getElementById('keypress'),
+	input = document.getElementById('input-with-keypress');
+
+noUiSlider.create(slider, {
+	start: 40,
+	step: 10,
+	range: {
+		'min': 0,
+		'20%': [ 300, 100 ],
+		'50%': [ 800, 50 ],
+		'max': 1000
+	}
+});
+
+slider.noUiSlider.on('update', function( values, handle ) {
+	input.value = values[handle];
+});
+
+input.addEventListener('change', function(){
+	slider.noUiSlider.set([null, this.value]);
+});
+</script>			
+<script>
+// Listen to keydown events on the input field.
+input.addEventListener('keydown', function( e ) {
+
+	// Convert the string to a number.
+	var value = Number( slider.noUiSlider.get() ),
+		sliderStep = slider.noUiSlider.steps()
+
+	// Select the stepping for the first handle.
+	sliderStep = sliderStep[0];
+
+	// 13 is enter,
+	// 38 is key up,
+	// 40 is key down.
+	switch ( e.which ) {
+		case 13:
+			slider.noUiSlider.set(this.value);
+			break;
+		case 38: slider.noUiSlider.set( value + sliderStep[1] );
+			break;
+		case 40: slider.noUiSlider.set( value - sliderStep[0] );
+			break;
+	}
+});
+</script>		</div>

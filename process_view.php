@@ -139,7 +139,7 @@
                       
                         <div class='row'>
                             <div class='col-xs-12'>
-                            <img src='images/1441185404.jpg'  width='100%'  height='400'>
+                            <img src='images/1441185404.jpg'  width='100%'  height=''>
                             </div>
                         </div>
                           <div class='row'>
