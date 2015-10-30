@@ -1,10 +1,63 @@
-
+//============== Function to add comma in decimal ==============//
+function addCommas(nStr)
+{
+	nStr += '';
+	x = nStr.split('.');
+	x1 = x[0];
+	x2 = x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while (rgx.test(x1)) {
+		x1 = x1.replace(rgx, '$1' + ',' + '$2');
+	}
+	return x1 + x2;
+}
+//==================end====================================
+//function for tooltip start
+function templateFormat(category,series,value) {
+	/*
+   var value1 = addCommas(value.toFixed(2));
+   var value2 = ((value/summ)*100).toFixed(2);
+   return value1 + " , " + value2 + " %";
+   */
+	//$("body").append(value);
+   if(series=="point1"){
+	   $("#valuePoint1").html(addCommas(value));
+	   return "<div style='border:1px solid white'>" +
+  		"<b style='color:yellow';>Event:</b> xxx xxxxxxxx xxxx xxxx xxx<br> " +
+  		"<b style='color:yellow';>Action:</b> xxx xxxxxxxx  xxxx xxx<br> " +
+  		"<b style='color:yellow';>VPSER:</b> xxx  xxxx xxxx xxx</div>";
+	   
+	   
+	    
+	   
+   }else if(series=="point2"){
+	   $("#valuePoint2").html(addCommas(value));
+	   return addCommas(value);
+   }else if(series=="point3"){
+	   $("#valuePoint3").html(addCommas(value));
+	   return "<div style='border:1px solid white'>" +
+ 		"<b style='color:yellow';>Event:</b> xxx xxxxxxxx xxxx xxxx xxx<br> " +
+ 		"<b style='color:yellow';>Action:</b> xxx xxxxxxxx  xxxx xxx<br> " +
+ 		"<b style='color:yellow';>VPSER:</b> xxx  xxxx xxxx xxx</div>";
+   }else if(series=="point4"){
+	   $("#valuePoint4").html(addCommas(value));
+	   return "<div style='border:1px solid white'>" +
+ 		"<b style='color:yellow';>Event:</b> xxx xxxxxxxx xxxx xxxx xxx<br> " +
+ 		"<b style='color:yellow';>Action:</b> xxx xxxxxxxx  xxxx xxx<br> " +
+ 		"<b style='color:yellow';>VPSER:</b> xxx  xxxx xxxx xxx</div>";
+   }else{
+	   return "<div style='border:1px solid white'>" +
+ 		"<b style='color:yellow';>Event:</b> xxx xxxxxxxx xxxx xxxx xxx<br> " +
+ 		"<b style='color:yellow';>Action:</b> xxx xxxxxxxx  xxxx xxx<br> " +
+ 		"<b style='color:yellow';>VPSER:</b> xxx  xxxx xxxx xxx</div>";
+   }
+}
+//function for tooltip end
+	
 $(document).ready(function(){
 	
-	// manage slide 
 	
-	 
-	  
+	// manage slide 
 	$("#chart").kendoChart({
 		theme: "Flat",
 		//theme: "MaterialBlack",
@@ -29,7 +82,7 @@ $(document).ready(function(){
         },
         legend: {
             position: "bottom",
-            visible: false
+            visible: true
         },
         seriesDefaults: {
             type: "line",
@@ -75,11 +128,21 @@ $(document).ready(function(){
             },
             majorUnit: 10000
         },
+        /*
         tooltip: {
             visible: true,
             shared: true,
             format: "N0"
         },
+        */
+        tooltip: {
+            visible: true,
+            template: "#= templateFormat(category,series.name,value) #",
+            //category,series.name,value
+			//template: "#= series.name #: #= value #",
+			shared: true
+        },
+
         zoomable: {
             mousewheel: {
                 lock: "y"
@@ -88,13 +151,20 @@ $(document).ready(function(){
                 lock: "y"
             }
         },
-        //pannable: true,
+        pannable: true,
         pannable: {
             lock: "y"
         },
     });
+
 	
-	//console.log($("#chart g g:3").get());
+	console.log($("#chart>svg>g>g:eq(2)>g>g:eq(0)>path:eq(1)").get());
+	var series1="#chart>svg>g>g:eq(2)>g>g:eq(0)";
+	$("#btnPoint1").click(function(){
+		//alert("hello");
+		console.log($(series1).get());
+		console.log(series1);
+	});
 	
 	/*click create trend graph start*/
 	$("[href='#tab-3']").click(function(){

@@ -260,7 +260,7 @@
         					switch ($_GET['page']){
         						case 'design_trend':include 'design_trend.php';break;
         						case 'process_view':include 'process_view.php';break;
-        						case 'trend':include 'trend.php';break;
+        						case 'trend':include 'trend.html';break;
         						case 'serverSetting':include 'serverSetting.php';break;
         						case 'pointConfiguration':include 'pointConfiguration.php';break;
         						case 'tagConfiguration':include 'tagConfiguration.php';break;

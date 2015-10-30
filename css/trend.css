@@ -122,3 +122,15 @@
 	margin-top:2px;
 	margin-bottom:5px;
 }
+#labelTitle{
+	float:left;
+	
+}
+#setEvent{
+	float:right;
+	width:50px;
+	text-align:right;
+}
+table{
+	font-size:13px;
+}
