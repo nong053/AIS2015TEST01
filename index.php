@@ -12,7 +12,10 @@
     <!-- kendo ui resource start -->
 	 
 	<link rel="stylesheet" href="js/kendoCommercial/styles/kendo.common.min.css" />
-	<link rel="stylesheet" href="js/kendoCommercial/styles/kendo.default.min.css" />
+	 <link rel="stylesheet" href="js/kendoCommercial/styles/kendo.default.min.css" /> 
+	<link rel="stylesheet" href="js/kendoCommercial/styles/kendo.dataviz.moonlight.min.css" />
+	
+	
 
     <!-- kendo ui resource end -->
     
@@ -81,7 +84,7 @@
 	<!-- kendo ui resource end -->
    <!-- <script src="js/kendoCommercial/js/kendo.all.min.js"></script> -->
     
-     <script src="//kendo.cdn.telerik.com/2015.3.930/js/kendo.all.min.js"></script>
+   <script src="//kendo.cdn.telerik.com/2015.3.930/js/kendo.all.min.js"></script>
      
          
 </head>
