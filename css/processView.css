@@ -4,8 +4,10 @@
 }
 .slideTop{
 	margin-top: 5px;
+	
 }
 .bgBlack{
 	background:black;
 	color:white;
+	background-image: url("../img/main_01.jpg");
 }
